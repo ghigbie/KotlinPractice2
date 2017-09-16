@@ -3,6 +3,7 @@ fun main(args: Array<String>){
     val b = 3
     val accountBalance = 100
     val price = 50
+    val degrees = 70
 
     if(a == b){
         println("Yo! A does equal B")
@@ -18,4 +19,9 @@ fun main(args: Array<String>){
         println("Get a job!")
     }
 
+    if(degrees == 70){
+        println("This is some nice weather. It's ${degrees} degrees outside.")
+    }else{
+        println("The end is near. It's ${degrees} degrees outside")
+    }
 }
