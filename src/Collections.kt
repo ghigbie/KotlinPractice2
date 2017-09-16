@@ -39,6 +39,9 @@ fun main(args: Array<String>){
     println("The owners of the vehicles are ${vehicles.keys}")
     vehicles.remove("Bobba Fett")
     println("The owners of the vehicles are all rebels: ${vehicles.keys}.")
+    println("It is ${vehicles.isEmpty()} that there are no rebel vehicles.")
+    vehicles.clear();
+    println("It is ${vehicles.isEmpty()} that there are no rebel vehicles.")
 
 
 }
