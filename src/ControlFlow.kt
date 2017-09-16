@@ -30,4 +30,20 @@ fun main(args: Array<String>){
     }else{
         println("The end is near. It's ${degrees} degrees outside")
     }
+
+    val isHungry = true
+    val isBored = false
+
+    if(isHungry == true || isBored == true){
+        println("You need something to do.")
+    }
+
+    if(isHungry || isBored){
+        println("Let's get pizza!")
+    }
+
+    if(!isHungry || !isBored){
+        println("We can just sit around and wait.")
+    }
+
 }
