@@ -20,5 +20,10 @@ fun main(args: Array<String>){
     for((key, value) in rebelVehicles){
         println("$key owns a $value")
     }
+    var x = 10
+    while(x > 0){
+        println(x)
+        x--
+    }
 
 }
