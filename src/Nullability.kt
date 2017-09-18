@@ -9,7 +9,11 @@ fun main(args: Array<String>){
     println(nullableName)
 
     println("Length: ${name.length}")
-    println("Length nullable: ${nullableName.length}")
+
+    if(nullableName != null){
+        println("Length nullable: ${nullableName.length}")
+    }
+    //println("Length nullable: ${nullableName.length}")
 
 
 
