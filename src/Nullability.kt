@@ -15,6 +15,14 @@ fun main(args: Array<String>){
     }
     //println("Length nullable: ${nullableName.length}")
 
+    //Null Check
+    var length = 0
+    if(nullableName != null){
+        length = nullableName.length
+    }else{
+        length = -1
+    }
+    println(length)
 
 
 }
