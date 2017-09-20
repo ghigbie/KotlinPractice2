@@ -81,5 +81,26 @@ fun main(args: Array<String>){
         println(it.towingCapacity)
     }
 
+    fun downloadTruckData2(url: String, completion: (Truck?, Boolean) -> Unit){
+        //send a download request
+        //get back a truck object and boolean
+        val webRequestSuccess = true
+        if(webRequestSuccess) {
+            val truck = Truck("Ford", "F-150", true, 3300)
+            completion(truck, true)
+        }else{
+            completion(null, false)
+        }
+    }
 
+    downloadTruckData2("fakeURL.com"){ truck, success ->
+        if(success == true){
+            //do something
+            println(truck?.make)
+            println(truck?.model)
+            truck?.tow()
+        }else{
+            println("Something wnent wrong")
+        }
+    }
 }
