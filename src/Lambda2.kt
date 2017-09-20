@@ -32,6 +32,19 @@ fun main(args: Array<String>){
     println(multiplyB(8, 4))
 
 
+    //make async request
+
+    fun downloadData(url: String, completion: () -> Unit){ //Unit is the same as void in Java
+        //sent a download request
+        //we got back data
+        //there were no network errors
+        completion()
+    }
+
+    downloadData("fakeUrl.com",{
+        println("The code is this block will only run after \"completion function\"")
+    })
+
 
 
 }
