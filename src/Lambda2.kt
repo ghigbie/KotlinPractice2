@@ -45,6 +45,41 @@ fun main(args: Array<String>){
         println("The code is this block will only run after \"completion function\"")
     })
 
+    fun downloadCarData(url: String, completion: (Car) -> Unit){
+        //send a download request
+        //get back car data
+        val car = Car("Tesla", "ModelX", "Midnight Blue")
+        completion(car)
+    }
+
+    downloadCarData("fakeUrl.com"){ car ->
+        println(car.color)
+        println(car.make)
+    }
+
+    downloadCarData("fakeUrl.com"){ //if there is only one parameter, you can use the key word it
+        println(it.color)
+        println(it.make)
+    }
+
+    fun downloadTruckData(url: String, completion: (Truck) -> Unit){
+        //send a download request
+        //get back truck data
+        val truck = Truck("Ford", "F-150", true, 2300)
+        completion(truck)
+    }
+
+    downloadTruckData("fakeURL.com"){ truck ->
+        println(truck.make)
+        println(truck.model)
+        println(truck.towingCapacity)
+    }
+
+    downloadTruckData("fakeUrl.com"){
+        println(it.make)
+        println(it.model)
+        println(it.towingCapacity)
+    }
 
 
 }
